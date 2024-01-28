@@ -1,5 +1,12 @@
+# steps:
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: ['build','-t','gcr.io/us-central1-a/demofoodvision/iris_docker','.']
+# - name: 'gcr.io/cloud-builders/'
+#   args: ['push','gcr.io/us-central1-a/demofoodvision/iris_docker']
+
+
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','gcr.io/us-central1-a/demofoodvision/iris_docker','.']
-- name: 'gcr.io/cloud-builders/'
-  args: ['push','gcr.io/us-central1-a/demofoodvision/iris_docker']
+  args: ['build', '-t', 'gcr.io/demofoodvision/iris_docker', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/demofoodvision/iris_docker']
